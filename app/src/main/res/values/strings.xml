@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Buzz</string>
+    <string name="welcomeTag">Welcome</string>
+    <string name="emailTag">Enter your Email:</string>
+    <string name="passwordTag">Enter your Password:</string>
+    <string name="buttonTag">LOGIN</string>
 </resources>
