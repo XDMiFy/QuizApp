@@ -4,4 +4,10 @@
     <string name="emailTag">Enter your Email:</string>
     <string name="passwordTag">Enter your Password:</string>
     <string name="buttonTag">LOGIN</string>
+    <string name="WelcomeSign">Good to see you,%1$s</string>
+    <string name="AnsButton">Answer</string>
+    <string name="ResultTitleLabel">You have made it</string>
+    <string name="RestartBTN">Restart?</string>
+
+
 </resources>

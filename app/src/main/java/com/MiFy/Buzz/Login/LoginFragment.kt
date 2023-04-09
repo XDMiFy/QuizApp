@@ -10,10 +10,16 @@ import android.widget.TextView
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.MiFy.Buzz.Helpers.DataManager
 import com.MiFy.Buzz.R
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
+
+@AndroidEntryPoint
 
 class LoginFragment: Fragment() {
-    private var userName: String= ""
+    @Inject
+    lateinit var datamanager: DataManager
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,13 +38,13 @@ class LoginFragment: Fragment() {
         }
         val userTextField = view.findViewById<EditText>(R.id.mail)
         userTextField.doOnTextChanged { text, start, before, count ->
-            userName=text.toString()
+            datamanager.UserName = text.toString()
             checkButtonEnabled()
         }
     }
 
     private fun checkButtonEnabled(){
         val button = view?.findViewById<Button>(R.id.login_btn)
-        button?.isEnabled = !userName.isEmpty()
+        button?.isEnabled = !datamanager.UserName.isEmpty()
     }
 }
